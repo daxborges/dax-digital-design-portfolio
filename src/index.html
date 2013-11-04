@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <!-- font awesome from BootstrapCDN -->
+    <!-- <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+    
+    </script>
+  </head>
+  <body>
+    <div id="footer-push-wrapper">
+      <header class="container">
+        <object class="logo" data="assets/svg/dax_digital_design_logo.svg" type="image/svg+xml"></object>
+      </header>
+      <div class="container" ui-view="main">
+        <ul class="row">
+          <li class="project-tile span4">
+            <div class="content">
+              <object class="landscape" data="assets/svg/clients/homegrown.svg" type="image/svg+xml"></object>
+            </div>
+          </li>
+          <li class="project-tile span4">
+            <div class="content">
+              <object class="portrait" data="assets/svg/clients/seattle_salads.svg" type="image/svg+xml"></object>
+            </div>
+          </li>
+          <li class="project-tile span4">
+            <div class="content"></div>
+          </li>
+          <li class="project-tile span4">
+            <div class="content"></div>
+          </li>
+          <li class="project-tile span4">
+            <div class="content"></div>
+          </li>
+          <li class="project-tile span4">
+            <div class="content"></div>
+          </li>
+          <li class="project-tile span4">
+            <div class="content"></div>
+          </li>
+          <li class="project-tile span4">
+            <div class="content"></div>
+          </li>
+          <li class="project-tile span4">
+            <div class="content"></div>
+          </li>
+        </ul>
+      </div>
+      <div id="push"></div>
+    </div>
+    <footer id="footer">
+      <ul class="container">
+        <li><a href="#">about</a></li>
+        <li><a href="#">contact</a></li>
+        <li><a href="#">r&#233;sum&#233;</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
