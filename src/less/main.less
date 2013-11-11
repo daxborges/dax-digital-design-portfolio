@@ -77,6 +77,12 @@ h1 {
   line-height: 36px;
   text-transform: uppercase;
 }
+h2 {
+  font-weight: 600;
+}
+p {
+  margin-bottom: 10px;
+}
 /**
  * Global Classes's
  */
@@ -86,11 +92,16 @@ h1 {
 .full-absolute {
   .full-size-absolute()
 }
+.fullWidth {
+  width: 100%;
+}
 
 /**
  * Global ID's
  */
-
+#main-header {
+  position: relative;
+}
 #footer-push-wrapper {
   min-height: 100%;
   height: auto !important;
@@ -103,7 +114,7 @@ h1 {
  */
 header {
   border-bottom: solid 10px @primaryColor;
-  padding-bottom: 20px;
+  padding-bottom: @regVerticalSpace;
   #header-logo {
     float: left;
     height: 80px;
@@ -148,5 +159,6 @@ footer#footer {
  */
 @import 'pages/home.less';
 @import 'pages/projects.less';
+@import 'pages/about.less';
 /* @import '../app/home/home.less'; */
 @import 'responsive.less'; // Call this last!!

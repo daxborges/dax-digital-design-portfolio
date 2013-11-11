@@ -19,6 +19,7 @@ angular.module( 'dagbPortfolioSite.projects', [
   'dagb.directives.svg.data',
   'dagb.filters.isLink',
   'dagb.filters.replace',
+  'dagb.services.inBounds',
   'dagbPortfolioSite.services.projects'
 ])
 
@@ -35,6 +36,10 @@ angular.module( 'dagbPortfolioSite.projects', [
       "main": {
         controller: 'ProjectsCtrl',
         templateUrl: 'projects/project.tpl.html'
+      },
+      "header-nav": {
+        controller: 'ProjectsCtrl',
+        templateUrl: 'projects/project-nav.tpl.html'
       }
     },
     data:{ pageTitle: 'Projects' }
@@ -44,9 +49,23 @@ angular.module( 'dagbPortfolioSite.projects', [
 /**
  * And of course we define a controller for our route.
  */
-.controller( 'ProjectsCtrl', function ProjectsController( $scope, $stateParams, projectsService ) {
-
-  $scope.project = _.find(projectsService, function(project) { return project.id === $stateParams.projectId; });
+.controller( 'ProjectsCtrl', function ProjectsController( $scope, $stateParams, inBounds, projectsService ) {
+  $scope.previousProject = null;
+  $scope.nextProject = null;
+  
+  inBounds.setUpperBound(projectsService.length-1);
+    
+  for(var i = 0; i < projectsService.length; i++) {
+    if(projectsService[i].id === $stateParams.projectId)
+    {
+      var previousIndex = inBounds.keepInBounds(i-1);
+      var nextIndex = inBounds.keepInBounds(i+1);
+      $scope.project = projectsService[i];
+      $scope.previousProject = projectsService[previousIndex];
+      $scope.nextProject = projectsService[nextIndex];
+    }
+  }
+  
   
 })
 

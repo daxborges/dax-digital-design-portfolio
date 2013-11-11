@@ -1,11 +1,10 @@
-angular.module( 'ngBoilerplate.about', [
-  'ui.state',
-  'placeholders',
-  'ui.bootstrap'
+angular.module( 'dagbPortfolioSite.about', [
+  'ui.router'
 ])
 
 .config(function config( $stateProvider ) {
   $stateProvider.state( 'about', {
+    name: 'about',
     url: '/about',
     views: {
       "main": {
@@ -13,17 +12,12 @@ angular.module( 'ngBoilerplate.about', [
         templateUrl: 'about/about.tpl.html'
       }
     },
-    data:{ pageTitle: 'What is It?' }
+    data:{ pageTitle: 'About' }
   });
 })
 
 .controller( 'AboutCtrl', function AboutCtrl( $scope ) {
-  // This is simple a demo for UI Boostrap.
-  $scope.dropdownDemoItems = [
-    "The first choice!",
-    "And another choice for you.",
-    "but wait! A third!"
-  ];
+  
 })
 
 ;

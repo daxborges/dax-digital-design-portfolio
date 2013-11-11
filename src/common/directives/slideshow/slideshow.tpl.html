@@ -5,7 +5,7 @@
     <li ng-repeat="(index, slide) in slides" ng-click="changeSlide(index)" dagb-slide-selector="{{index}}"></li>
   </ul>
   
-  <ul class="slides" dagb-slides >
+  <ul class="slides">
     <li ng-repeat="(index, slide) in slides" dagb-slide-selector="{{index}}">
       <img ng-src="{{ slide.src }}" alt="" />
     </li>

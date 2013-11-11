@@ -3,6 +3,7 @@ angular.module( 'dagbPortfolioSite', [
   'templates-common',
   'dagbPortfolioSite.home',
   'dagbPortfolioSite.projects',
+  'dagbPortfolioSite.about',
   'ui.router'
 ])
 

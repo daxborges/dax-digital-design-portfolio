@@ -16,11 +16,12 @@
   </head>
   <body>
     <div id="footer-push-wrapper">
-      <header class="container">
+      <header id="main-header" class="container">
         <div id="header-logo" class="svg-wrap">
           <object class="logo" data="assets/svg/dax_digital_design_logo.svg" type="image/svg+xml"></object>
           <a class="full-absolute" ui-sref="home" ></a>
         </div>
+        <div id="header-nav" ui-view="header-nav"></div> 
       </header>
       <div class="container">
         <div id="main-view" ui-view="main"></div> 
@@ -29,7 +30,7 @@
     </div>
     <footer id="footer">
       <ul class="container">
-        <li><a href="#">about</a></li>
+        <li><a ui-sref="about">about</a></li>
         <li><a href="#">contact</a></li>
         <li><a href="/assets/pdf/dax_borges_resume_2013.pdf" target="_blank">r&#233;sum&#233;</a></li>
       </ul>

@@ -1,6 +1,6 @@
 angular.module( 'dagb.directives.slideshow.slideshow', [
   'dagb.directives.slideshow.slideSelector',
-  'dagb.directives.slideshow.slides'
+  'dagb.services.inBounds'
 ])
 
 .directive( 'dagbSlideshow', function() {
@@ -20,7 +20,7 @@ angular.module( 'dagb.directives.slideshow.slideshow', [
   };
 })
 
-.controller( 'SlideshowCtrl', function SlideshowController( $scope ) {
+.controller( 'SlideshowCtrl', function SlideshowController( $scope, inBounds ) {
   
   $scope.currentSlideIndex = 0;
   
@@ -28,21 +28,8 @@ angular.module( 'dagb.directives.slideshow.slideshow', [
   var slideshowTimerPause;
   
   var changeSlide = function(newIndex) {
-    if(newIndex < 0 || newIndex >= $scope.slides.length) 
-    {
-      if(newIndex >= $scope.slides.length) 
-      {
-        $scope.currentSlideIndex = 0;
-      }
-      else if(newIndex < 0) 
-      {
-        $scope.currentSlideIndex = $scope.slides.length-1;
-      }
-    }
-    else
-    {
-      $scope.currentSlideIndex = newIndex;
-    }
+    inBounds.setUpperBound($scope.slides.length-1);
+    $scope.currentSlideIndex = inBounds.keepInBounds(newIndex);
     $scope.$broadcast('slideChanged', $scope.currentSlideIndex);
   };
   
