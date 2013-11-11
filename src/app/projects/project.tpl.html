@@ -6,11 +6,9 @@
     <div id="project-info" class="row ">
     
       <div ng-repeat="(key, value) in project.info" class="info span4">
-        <b>{{ key }}: </b> {{ value | dagbReplace:'http://www.' }}
-       <!--
- <span ng-hide="key !== 'website'">{{ value }}</span>
-        <a ng-hide="key === 'website'" href="{{ value }}">{{ value | dagbReplace:'http://www.' }}</a>
--->
+        <b>{{ key }}: </b>
+        <span ng-if="key !== 'website'">{{ value }}</span>
+        <a ng-if="key === 'website'" href="{{ value }}" target="_blank">{{ value | dagbReplace:'http://www.' }}</a>
       </div>
       
       <div class="span8 techs">
@@ -33,11 +31,3 @@
 <div class="row top-gutter">
   <div class="span12 slideshow" dagb-slideshow="project.slides"></div>
 </div>
-
-<!--
-<div class="row top-gutter">
-  <div class="span12">
-    {{ project }}
-  </div>
-</div>
--->
