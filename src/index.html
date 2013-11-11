@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="dagbPortfolioSite" ng-controller="AppCtrl" >
   <head>
     <title ng-bind="pageTitle"></title>
 
@@ -17,42 +17,13 @@
   <body>
     <div id="footer-push-wrapper">
       <header class="container">
-        <object class="logo" data="assets/svg/dax_digital_design_logo.svg" type="image/svg+xml"></object>
+        <div id="header-logo" class="svg-wrap">
+          <object class="logo" data="assets/svg/dax_digital_design_logo.svg" type="image/svg+xml"></object>
+          <a class="full-absolute" ui-sref="home" ></a>
+        </div>
       </header>
-      <div class="container" ui-view="main">
-        <ul class="row">
-          <li class="project-tile span4">
-            <div class="content">
-              <object class="landscape" data="assets/svg/clients/homegrown.svg" type="image/svg+xml"></object>
-            </div>
-          </li>
-          <li class="project-tile span4">
-            <div class="content">
-              <object class="portrait" data="assets/svg/clients/seattle_salads.svg" type="image/svg+xml"></object>
-            </div>
-          </li>
-          <li class="project-tile span4">
-            <div class="content"></div>
-          </li>
-          <li class="project-tile span4">
-            <div class="content"></div>
-          </li>
-          <li class="project-tile span4">
-            <div class="content"></div>
-          </li>
-          <li class="project-tile span4">
-            <div class="content"></div>
-          </li>
-          <li class="project-tile span4">
-            <div class="content"></div>
-          </li>
-          <li class="project-tile span4">
-            <div class="content"></div>
-          </li>
-          <li class="project-tile span4">
-            <div class="content"></div>
-          </li>
-        </ul>
+      <div class="container">
+        <div id="main-view" ui-view="main"></div> 
       </div>
       <div id="push"></div>
     </div>

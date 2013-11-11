@@ -55,6 +55,7 @@ html, body {
 }
 body {
   background: url('img/bg/natural_paper') repeat;
+  color: @primaryColor;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -70,14 +71,26 @@ a {
 li {
   list-style: none;
 }
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 36px;
+  text-transform: uppercase;
+}
 /**
  * Global Classes's
  */
-
+.top-gutter {
+  margin-top: @gridGutterWidth;
+}
+.full-absolute {
+  .full-size-absolute()
+}
 
 /**
  * Global ID's
  */
+
 #footer-push-wrapper {
   min-height: 100%;
   height: auto !important;
@@ -91,10 +104,16 @@ li {
 header {
   border-bottom: solid 10px @primaryColor;
   padding-bottom: 20px;
-  .logo {
-    margin-top: 20px;
+  #header-logo {
+    float: left;
     height: 80px;
+    margin-top: 20px;
+    position: relative;
     width: 80px;
+    .logo {
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 
@@ -127,7 +146,7 @@ footer#footer {
  * Now that all app-wide styles have been applied, we can load the styles for
  * all the submodules and components we are using. 
  */
-@import 'index.less';
-@import 'responsive.less';
+@import 'pages/home.less';
+@import 'pages/projects.less';
 /* @import '../app/home/home.less'; */
-
+@import 'responsive.less'; // Call this last!!

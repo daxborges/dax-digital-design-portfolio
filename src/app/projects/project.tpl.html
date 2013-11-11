@@ -1,0 +1,43 @@
+<div class="row top-gutter">
+  <div class="span4">
+    <h1>{{ project.info.client }}</h1>
+  </div>
+  <div class="span8">
+    <div id="project-info" class="row ">
+    
+      <div ng-repeat="(key, value) in project.info" class="info span4">
+        <b>{{ key }}: </b> {{ value | dagbReplace:'http://www.' }}
+       <!--
+ <span ng-hide="key !== 'website'">{{ value }}</span>
+        <a ng-hide="key === 'website'" href="{{ value }}">{{ value | dagbReplace:'http://www.' }}</a>
+-->
+      </div>
+      
+      <div class="span8 techs">
+        <div class="row">
+          <ul>
+            <li ng-repeat="(key, values) in project.tech" class="tech span2">
+              <b>{{ key }}</b>
+              <ul>
+                 <li ng-repeat="value in values" class="span2">{{ value }}</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="row top-gutter">
+  <div class="span12 slideshow" dagb-slideshow="project.slides"></div>
+</div>
+
+<!--
+<div class="row top-gutter">
+  <div class="span12">
+    {{ project }}
+  </div>
+</div>
+-->

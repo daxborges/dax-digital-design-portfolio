@@ -12,10 +12,14 @@
  * The dependencies block here is also where component dependencies should be
  * specified, as shown below.
  */
-angular.module( 'dagbPortfolioSite.home', [
+angular.module( 'dagbPortfolioSite.projects', [
   'ui.router',
-  'dagbPortfolioSite.services.projects',
-  'dagb.directives.svg.data'
+  'dagb.directives.slideshow.slideshow',
+  'dagb.directives.svg.changeColor',
+  'dagb.directives.svg.data',
+  'dagb.filters.isLink',
+  'dagb.filters.replace',
+  'dagbPortfolioSite.services.projects'
 ])
 
 /**
@@ -24,24 +28,26 @@ angular.module( 'dagbPortfolioSite.home', [
  * this way makes each module more "self-contained".
  */
 .config(function config( $stateProvider ) {
-  $stateProvider.state( 'home', {
-    url: '/home',
+  $stateProvider.state( 'projects', {
+    name : 'projects',
+    url: '/projects/:projectId',
     views: {
       "main": {
-        controller: 'HomeCtrl',
-        templateUrl: 'home/home.tpl.html'
+        controller: 'ProjectsCtrl',
+        templateUrl: 'projects/project.tpl.html'
       }
     },
-    data:{ pageTitle: 'Home' }
+    data:{ pageTitle: 'Projects' }
   });
 })
 
 /**
  * And of course we define a controller for our route.
  */
-.controller( 'HomeCtrl', function HomeController( $scope, projectsService ) {
-  $scope.projects = projectsService;
+.controller( 'ProjectsCtrl', function ProjectsController( $scope, $stateParams, projectsService ) {
+
+  $scope.project = _.find(projectsService, function(project) { return project.id === $stateParams.projectId; });
+  
 })
 
 ;
-
