@@ -45,7 +45,160 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
           'src' : clientImageDir + 'homegrown/slide1.jpg'
         },
         {
-          'src' : clientImageDir + 'homegrown/slide2.jpg'
+          'src' : clientImageDir + 'homegrown/slide3.jpg'
+        },
+        {
+          'src' : clientImageDir + 'homegrown/slide4.jpg'
+        },
+        {
+          'src' : clientImageDir + 'homegrown/slide5.jpg'
+        }
+      ]
+    },
+    // Phil Borges Productions
+    {
+      'id' : 'phil-borges-productions',
+      'logo' : {
+        'src' : clientSvgDir + 'phil_borges_productions.svg'
+      },
+      'info' : {
+        'client' : 'Phil Borges Productions',
+        'creative direction' : 'Phil Borges',
+        'website' : 'http://www.philborges.com',
+        'design direction' : 'dax borges'
+      },
+      'tech' : {
+        'media' : [
+          'wordmark',
+          'website'
+        ],
+        'software' : [
+          'illustrator',
+          'photoshop'
+        ],
+        'technologies' : [
+          'php',
+          'javascript',
+          'mysql',
+          'html',
+          'css'
+        ],
+        'frameworks' : [
+          'cakephp',
+          'jquery',
+          'angularjs'
+        ]
+      },
+      'slides' : [
+        {
+          'src' : clientImageDir + 'phil_borges/slide1.jpg'
+        },
+        {
+          'src' : clientImageDir + 'phil_borges/slide3.jpg'
+        },
+        {
+          'src' : clientImageDir + 'phil_borges/slide5.jpg'
+        },
+        {
+          'src' : clientImageDir + 'phil_borges/slide7.jpg'
+        },
+        {
+          'src' : clientImageDir + 'phil_borges/slide6.jpg'
+        }
+      ]
+    },
+    // Rain Shadow Meats
+    {
+      'id' : 'rain-shadow-meats',
+      'logo' : {
+        'src' : clientSvgDir + 'rain_shadow_meats.svg'
+      },
+      'info' : {
+        'client' : 'Rain Shadow Meats',
+        'creative direction' : 'dax borges',
+        'website' : 'http://www.rainshadowmeats.com',
+        'design direction' : 'dax borges'
+      },
+      'tech' : {
+        'media' : [
+          'wordmark',
+          'website'
+        ],
+        'software' : [
+          'illustrator',
+          'photoshop'
+        ],
+        'technologies' : [
+          'php',
+          'javascript',
+          'mysql',
+          'html',
+          'css'
+        ],
+        'frameworks' : [
+          'cakephp',
+          'jquery'
+        ]
+      },
+      'slides' : [
+        {
+          'src' : clientImageDir + 'rain_shadow_meats/slide1.jpg'
+        },
+        {
+          'src' : clientImageDir + 'rain_shadow_meats/slide7.jpg'
+        },
+        {
+          'src' : clientImageDir + 'rain_shadow_meats/slide6.jpg'
+        },
+        {
+          'src' : clientImageDir + 'rain_shadow_meats/slide5.jpg'
+        }
+      ]
+    },
+    // Stirring The Fire
+    {
+      'id' : 'stirring-the-fire',
+      'logo' : {
+        'src' : clientSvgDir + 'stirring_the_fire.svg'
+      },
+      'info' : {
+        'client' : 'Stirring The Fire',
+        'creative direction' : 'Phil Borges',
+        'website' : 'http://www.stirringthefire.com',
+        'design direction' : 'dax borges'
+      },
+      'tech' : {
+        'media' : [
+          'website'
+        ],
+        'software' : [
+          'illustrator',
+          'photoshop'
+        ],
+        'technologies' : [
+          'php',
+          'javascript',
+          'mysql',
+          'html',
+          'css'
+        ],
+        'frameworks' : [
+          'cakephp',
+          'jquery'
+        ]
+      },
+      'slides' : [
+        {
+          'src' : clientImageDir + 'stirring_the_fire/slide6.jpg'
+        },
+        {
+          'src' : clientImageDir + 'stirring_the_fire/slide8.jpg'
+        },
+        {
+          'src' : clientImageDir + 'stirring_the_fire/slide9.jpg'
+        },
+        {
+          'src' : clientImageDir + 'stirring_the_fire/slide7.jpg'
         }
       ]
     },
@@ -57,148 +210,30 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
       },
       'info' : {
         'client' : 'seattle salads',
-        'creative direction' : 'ben friedman',
-        'website' : 'http://www.eathomegrown.com',
+        'creative direction' : 'dax borges',
         'design direction' : 'dax borges'
       },
       'tech' : {
         'media' : [
-          'website',
-          'print',
-          'collateral'
+          'wordmark'
         ],
         'software' : [
           'illustrator',
           'photoshop'
-        ],
+        ]/*
+,
         'technologies' : [
-          'php',
-          'javascript',
-          'mysql',
-          'html',
-          'css'
+          
         ],
         'frameworks' : [
-          'cakephp',
-          'jquery'
+          
         ]
+*/
       },
       'slides' : [
-      
-      ]
-    },
-    // Rain Shadow Meats
-    {
-      'id' : 'rain-shadow-meats',
-      'logo' : {
-        'src' : clientSvgDir + 'rain_shadow_meats.svg'
-      },
-      'info' : {
-        'client' : 'Rain Shadow Meats',
-        'creative direction' : 'ben friedman',
-        'website' : 'http://www.eathomegrown.com',
-        'design direction' : 'dax borges'
-      },
-      'tech' : {
-        'media' : [
-          'website',
-          'print',
-          'collateral'
-        ],
-        'software' : [
-          'illustrator',
-          'photoshop'
-        ],
-        'technologies' : [
-          'php',
-          'javascript',
-          'mysql',
-          'html',
-          'css'
-        ],
-        'frameworks' : [
-          'cakephp',
-          'jquery'
-        ]
-      },
-      'slides' : [
-      
-      ]
-    },
-    // Phil Borges Productions
-    {
-      'id' : 'phil-borges-productions',
-      'logo' : {
-        'src' : clientSvgDir + 'phil_borges_productions.svg'
-      },
-      'info' : {
-        'client' : 'Phil Borges Productions',
-        'creative direction' : 'ben friedman',
-        'website' : 'http://www.eathomegrown.com',
-        'design direction' : 'dax borges'
-      },
-      'tech' : {
-        'media' : [
-          'website',
-          'print',
-          'collateral'
-        ],
-        'software' : [
-          'illustrator',
-          'photoshop'
-        ],
-        'technologies' : [
-          'php',
-          'javascript',
-          'mysql',
-          'html',
-          'css'
-        ],
-        'frameworks' : [
-          'cakephp',
-          'jquery'
-        ]
-      },
-      'slides' : [
-      
-      ]
-    },
-    // Stirring The Fire
-    {
-      'id' : 'stirring-the-fire',
-      'logo' : {
-        'src' : clientSvgDir + 'stirring_the_fire.svg'
-      },
-      'info' : {
-        'client' : 'Stirring The Fire',
-        'creative direction' : 'ben friedman',
-        'website' : 'http://www.eathomegrown.com',
-        'design direction' : 'dax borges'
-      },
-      'tech' : {
-        'media' : [
-          'website',
-          'print',
-          'collateral'
-        ],
-        'software' : [
-          'illustrator',
-          'photoshop'
-        ],
-        'technologies' : [
-          'php',
-          'javascript',
-          'mysql',
-          'html',
-          'css'
-        ],
-        'frameworks' : [
-          'cakephp',
-          'jquery'
-        ]
-      },
-      'slides' : [
-      
+        {
+          'src' : clientImageDir + 'seattle_salads/slide1.jpg'
+        }
       ]
     },
     // Chignik
@@ -209,34 +244,36 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
       },
       'info' : {
         'client' : 'Chignik',
-        'creative direction' : 'ben friedman',
-        'website' : 'http://www.eathomegrown.com',
+        'creative direction' : 'dax borges',
         'design direction' : 'dax borges'
       },
       'tech' : {
         'media' : [
-          'website',
-          'print',
+          'wordmark',
           'collateral'
         ],
         'software' : [
           'illustrator',
           'photoshop'
-        ],
+        ]/*
+,
         'technologies' : [
-          'php',
-          'javascript',
-          'mysql',
-          'html',
-          'css'
+          
         ],
         'frameworks' : [
-          'cakephp',
-          'jquery'
+          
         ]
+*/
       },
       'slides' : [
-      
+        {
+          'src' : clientImageDir + 'chignik/slide1.jpg'
+        }/*
+,
+        {
+          'src' : clientImageDir + 'chignik/slide2.jpg'
+        }
+*/
       ]
     },
     // Vidwic
@@ -247,34 +284,33 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
       },
       'info' : {
         'client' : 'Vidwic',
-        'creative direction' : 'ben friedman',
-        'website' : 'http://www.eathomegrown.com',
+        'creative direction' : 'dax borges',
         'design direction' : 'dax borges'
       },
       'tech' : {
         'media' : [
-          'website',
-          'print',
-          'collateral'
+          'wordmark',
+          'web app'
         ],
         'software' : [
-          'illustrator',
-          'photoshop'
+          'illustrator'
         ],
         'technologies' : [
-          'php',
+          'ruby',
           'javascript',
           'mysql',
           'html',
           'css'
         ],
         'frameworks' : [
-          'cakephp',
+          'rails',
           'jquery'
         ]
       },
       'slides' : [
-      
+        {
+          'src' : clientImageDir + 'vidwic/slide1.jpg'
+        }
       ]
     },
     // 3Si
@@ -285,34 +321,29 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
       },
       'info' : {
         'client' : '3SI',
-        'creative direction' : 'ben friedman',
-        'website' : 'http://www.eathomegrown.com',
+        'creative direction' : 'dax borges',
         'design direction' : 'dax borges'
       },
       'tech' : {
         'media' : [
-          'website',
-          'print',
-          'collateral'
+          'wordmark'
         ],
         'software' : [
-          'illustrator',
-          'photoshop'
-        ],
+          'illustrator'
+        ]/*
+,
         'technologies' : [
-          'php',
-          'javascript',
-          'mysql',
-          'html',
-          'css'
+          
         ],
         'frameworks' : [
-          'cakephp',
-          'jquery'
+          
         ]
+*/
       },
       'slides' : [
-      
+        {
+          'src' : clientImageDir + '3si/slide1.jpg'
+        }
       ]
     },
     // Sole 2.0
@@ -323,34 +354,32 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
       },
       'info' : {
         'client' : 'Sole 2.0',
-        'creative direction' : 'ben friedman',
-        'website' : 'http://www.eathomegrown.com',
+        'creative direction' : 'dax borges',
         'design direction' : 'dax borges'
       },
       'tech' : {
         'media' : [
-          'website',
-          'print',
+          'wordmark',
           'collateral'
         ],
         'software' : [
           'illustrator',
-          'photoshop'
-        ],
+          'photoshop',
+          'fireworks'
+        ]/*
+,
         'technologies' : [
-          'php',
-          'javascript',
-          'mysql',
-          'html',
-          'css'
+          
         ],
         'frameworks' : [
-          'cakephp',
-          'jquery'
+          
         ]
+*/
       },
       'slides' : [
-      
+        {
+          'src' : clientImageDir + 'sole_20/slide1.jpg'
+        }
       ]
     }
   ];
