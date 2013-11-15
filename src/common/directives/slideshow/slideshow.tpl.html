@@ -1,7 +1,7 @@
 {{ currentSlideIndex }}
 <div class="content">
 
-  <ul class="slide-list-nav" >
+  <ul class="slide-list-nav" ng-if="hasMultipleSlides()" >
     <li ng-repeat="(index, slide) in slides" ng-click="changeSlide(index)" dagb-slide-selector="{{index}}"></li>
   </ul>
   
@@ -10,7 +10,5 @@
       <img ng-src="{{ slide.src }}" alt="" />
     </li>
   </ul>
-  
-  <!-- <object dagb-svg-data="{{ project.logo.src }}" dagb-svg-change-color type="image/svg+xml"></object> -->
   
 </div>

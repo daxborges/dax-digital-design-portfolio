@@ -14,7 +14,10 @@ angular.module( 'dagb.directives.slideshow.slideshow', [
     link: function( scope, element, attrs ) {
     
       scope.slides = scope.dagbSlideshow;
-      scope.startAutoSlideshow();
+      
+      if(scope.hasMultipleSlides()) {
+        scope.startAutoSlideshow();
+      }
       
     }
   };
@@ -89,6 +92,10 @@ angular.module( 'dagb.directives.slideshow.slideshow', [
   
   $scope.isCurrentSlideIndex = function(index) {
     return parseInt(index, 10) === $scope.currentSlideIndex;
+  };
+  
+  $scope.hasMultipleSlides = function() {
+    return $scope.slides.length > 1;
   };
   
 })

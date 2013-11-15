@@ -12,14 +12,15 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
       'logo' : {
         'src' : clientSvgDir + 'homegrown.svg'
       },
+      'website' : 'http://www.eathomegrown.com',
       'info' : {
         'client' : 'homegrown',
         'creative direction' : 'ben friedman',
-        'website' : 'http://www.eathomegrown.com',
         'design direction' : 'dax borges'
       },
       'tech' : {
         'media' : [
+          'wordmark',
           'website',
           'print',
           'collateral'
@@ -61,10 +62,10 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
       'logo' : {
         'src' : clientSvgDir + 'phil_borges_productions.svg'
       },
+      'website' : 'http://www.philborges.com',
       'info' : {
         'client' : 'Phil Borges Productions',
         'creative direction' : 'Phil Borges',
-        'website' : 'http://www.philborges.com',
         'design direction' : 'dax borges'
       },
       'tech' : {
@@ -113,10 +114,10 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
       'logo' : {
         'src' : clientSvgDir + 'rain_shadow_meats.svg'
       },
+      'website' : 'http://www.rainshadowmeats.com',
       'info' : {
         'client' : 'Rain Shadow Meats',
-        'creative direction' : 'dax borges',
-        'website' : 'http://www.rainshadowmeats.com',
+        'creative direction' : 'russell flint',
         'design direction' : 'dax borges'
       },
       'tech' : {
@@ -161,10 +162,10 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
       'logo' : {
         'src' : clientSvgDir + 'stirring_the_fire.svg'
       },
+      'website' : 'http://www.stirringthefire.com',
       'info' : {
         'client' : 'Stirring The Fire',
         'creative direction' : 'Phil Borges',
-        'website' : 'http://www.stirringthefire.com',
         'design direction' : 'dax borges'
       },
       'tech' : {
@@ -210,7 +211,7 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
       },
       'info' : {
         'client' : 'seattle salads',
-        'creative direction' : 'dax borges',
+        'creative direction' : 'desirae rabe',
         'design direction' : 'dax borges'
       },
       'tech' : {
@@ -244,7 +245,7 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
       },
       'info' : {
         'client' : 'Chignik',
-        'creative direction' : 'dax borges',
+        'creative direction' : 'joe donati',
         'design direction' : 'dax borges'
       },
       'tech' : {
@@ -321,7 +322,7 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
       },
       'info' : {
         'client' : '3SI',
-        'creative direction' : 'dax borges',
+        'creative direction' : 'barbara rosen',
         'design direction' : 'dax borges'
       },
       'tech' : {

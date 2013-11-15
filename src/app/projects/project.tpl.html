@@ -1,14 +1,16 @@
 <div class="row top-gutter">
   <div class="span4">
     <h1>{{ project.info.client }}</h1>
+    <a ng-if="project.website | isDefined" class="subH1" href="{{ project.website }}" target="_blank">
+      {{ project.website | dagbReplace:'http://www.' }}
+    </a>
   </div>
   <div class="span8">
     <div id="project-info" class="row ">
     
-      <div ng-repeat="(key, value) in project.info" class="info span4">
+      <div ng-repeat="(key, value) in project.info" class="info span4" ng-if="key !== 'client'">
         <b>{{ key }}: </b>
-        <span ng-if="key !== 'website'">{{ value }}</span>
-        <a ng-if="key === 'website'" href="{{ value }}" target="_blank">{{ value | dagbReplace:'http://www.' }}</a>
+        <span >{{ value }}</span>
       </div>
       
       <div class="span8 techs">
