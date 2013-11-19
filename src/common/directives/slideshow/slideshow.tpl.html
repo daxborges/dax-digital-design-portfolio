@@ -1,14 +1,24 @@
-{{ currentSlideIndex }}
 <div class="content">
 
-  <ul class="slide-list-nav" ng-if="hasMultipleSlides()" >
+  <ul ng-hide="loading" class="slide-list-nav" ng-if="hasMultipleSlides()" >
     <li ng-repeat="(index, slide) in slides" ng-click="changeSlide(index)" dagb-slide-selector="{{index}}"></li>
   </ul>
   
-  <ul class="slides">
-    <li ng-repeat="(index, slide) in slides" dagb-slide-selector="{{index}}">
-      <img ng-src="{{ slide.src }}" alt="" />
-    </li>
-  </ul>
+  <div class="slides">
+  
+    <div ng-show="loading" class="loader" dagb-loader="loading" >
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    
+    <ul ng-hide="loading" ng-click="nextSlide()">
+      <li  ng-repeat="(index, slide) in slides" dagb-slide-selector="{{index}}" dagb-slide-selector-animate >
+        <img ng-src="{{ slide.src }}" alt="" />
+      </li>
+    </ul>
+    
+  </div>
   
 </div>

@@ -103,6 +103,23 @@ p {
   margin: -5px 0px 20px 0px;
   text-transform: uppercase;
 }
+
+.loader {
+  height: 84px;
+  left: 50%;
+  margin: -42px 0px 0px -42px;
+  position: absolute;
+  top: 50%;
+  width: 84px;
+  .circle {
+    background-color: @primaryColor;
+    display: inline-block;
+    height: 30px;
+    margin: 0px 10px 10px 0px;
+    width: 30px;
+    .circle();
+  }
+}
 /**
  * Global ID's
  */

@@ -288,6 +288,7 @@ module.exports = function ( grunt ) {
       options: {
         curly: true,
         immed: true,
+        loopfunc: true,
         newcap: true,
         noarg: true,
         sub: true,

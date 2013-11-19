@@ -17,6 +17,7 @@ angular.module( 'dagbPortfolioSite.projects', [
   'dagb.directives.slideshow.slideshow',
   'dagb.directives.svg.changeColor',
   'dagb.directives.svg.data',
+  'dagb.filters.isDefined',
   'dagb.filters.isLink',
   'dagb.filters.replace',
   'dagb.services.inBounds',

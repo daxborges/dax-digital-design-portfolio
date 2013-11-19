@@ -1,7 +1,15 @@
-<ul class="row">
+<div ng-show="loading" class="loader" dagb-loader="loading" >
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+</div>
+    
+<ul ng-hide="loading" class="row" dagb-list-animate="loading">
   <li ng-repeat="project in projects" class="project-tile span4">
     <div class="content">
-      <object dagb-svg-data="{{ project.logo.src }}" type="image/svg+xml"></object>
+      <span class="helper"></span>
+      <img ng-src="{{ project.logo.src }}" alt="{{ project.info.client }}" class="{{ project.logo.orientation }}"/>
     </div>
     <a class="full-absolute" ui-sref="projects({ projectId : project.id })" ></a>
   </li>

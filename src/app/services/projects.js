@@ -4,13 +4,15 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
 
   var clientSvgDir = 'assets/svg/clients/';
   var clientImageDir = 'assets/img/clients/';
+  var clientLogoDir = 'assets/img/logos/clients/';
   
   var projectsService  = [
     // Homegrown
     {
       'id' : 'homegrown',
       'logo' : {
-        'src' : clientSvgDir + 'homegrown.svg'
+        'src' : clientLogoDir + 'homegrown.png',
+        'orientation' : 'landscape'
       },
       'website' : 'http://www.eathomegrown.com',
       'info' : {
@@ -60,7 +62,8 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
     {
       'id' : 'phil-borges-productions',
       'logo' : {
-        'src' : clientSvgDir + 'phil_borges_productions.svg'
+        'src' : clientLogoDir + 'phil_borges_productions.png',
+        'orientation' : 'landscape'
       },
       'website' : 'http://www.philborges.com',
       'info' : {
@@ -95,16 +98,16 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
           'src' : clientImageDir + 'phil_borges/slide1.jpg'
         },
         {
-          'src' : clientImageDir + 'phil_borges/slide3.jpg'
-        },
-        {
           'src' : clientImageDir + 'phil_borges/slide5.jpg'
         },
         {
           'src' : clientImageDir + 'phil_borges/slide7.jpg'
         },
         {
-          'src' : clientImageDir + 'phil_borges/slide6.jpg'
+          'src' : clientImageDir + 'phil_borges/slide8.jpg'
+        },
+        {
+          'src' : clientImageDir + 'phil_borges/slide3.jpg'
         }
       ]
     },
@@ -112,7 +115,8 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
     {
       'id' : 'rain-shadow-meats',
       'logo' : {
-        'src' : clientSvgDir + 'rain_shadow_meats.svg'
+        'src' : clientLogoDir + 'rain_shadow_meats.png',
+        'orientation' : 'landscape'
       },
       'website' : 'http://www.rainshadowmeats.com',
       'info' : {
@@ -160,7 +164,8 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
     {
       'id' : 'stirring-the-fire',
       'logo' : {
-        'src' : clientSvgDir + 'stirring_the_fire.svg'
+        'src' : clientLogoDir + 'stirring_the_fire.png',
+        'orientation' : 'landscape'
       },
       'website' : 'http://www.stirringthefire.com',
       'info' : {
@@ -196,7 +201,7 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
           'src' : clientImageDir + 'stirring_the_fire/slide8.jpg'
         },
         {
-          'src' : clientImageDir + 'stirring_the_fire/slide9.jpg'
+          'src' : clientImageDir + 'stirring_the_fire/slide10.jpg'
         },
         {
           'src' : clientImageDir + 'stirring_the_fire/slide7.jpg'
@@ -207,7 +212,8 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
     {
       'id' : 'seattle-salads',
       'logo' : {
-        'src' : clientSvgDir + 'seattle_salads.svg'
+        'src' : clientLogoDir + 'seattle_salads.png',
+        'orientation' : 'portrait'
       },
       'info' : {
         'client' : 'seattle salads',
@@ -241,7 +247,8 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
     {
       'id' : 'chignik',
       'logo' : {
-        'src' : clientSvgDir + 'chignik.svg'
+        'src' : clientLogoDir + 'chignik.png',
+        'orientation' : 'landscape'
       },
       'info' : {
         'client' : 'Chignik',
@@ -281,7 +288,8 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
     {
       'id' : 'vidwic',
       'logo' : {
-        'src' : clientSvgDir + 'vidwic.svg'
+        'src' : clientLogoDir + 'vidwic.png',
+        'orientation' : 'landscape'
       },
       'info' : {
         'client' : 'Vidwic',
@@ -318,7 +326,8 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
     {
       'id' : '3si',
       'logo' : {
-        'src' : clientSvgDir + 'three_s_i.svg'
+        'src' : clientLogoDir + 'three_s_i.png',
+        'orientation' : 'portrait'
       },
       'info' : {
         'client' : '3SI',
@@ -351,7 +360,8 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
     {
       'id' : 'sole-2-0',
       'logo' : {
-        'src' : clientSvgDir + 'sole_2_0.svg'
+        'src' : clientLogoDir + 'sole_2_0.png',
+        'orientation' : 'landscape'
       },
       'info' : {
         'client' : 'Sole 2.0',

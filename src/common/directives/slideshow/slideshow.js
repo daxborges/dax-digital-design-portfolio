@@ -1,5 +1,7 @@
 angular.module( 'dagb.directives.slideshow.slideshow', [
+  'dagb.directives.loader.loader',
   'dagb.directives.slideshow.slideSelector',
+  'dagb.services.imagesloaded',
   'dagb.services.inBounds'
 ])
 
@@ -13,25 +15,43 @@ angular.module( 'dagb.directives.slideshow.slideshow', [
     },
     link: function( scope, element, attrs ) {
     
-      scope.slides = scope.dagbSlideshow;
-      
-      if(scope.hasMultipleSlides()) {
-        scope.startAutoSlideshow();
-      }
+      scope.initSlideshow(scope.dagbSlideshow);
       
     }
   };
 })
 
-.controller( 'SlideshowCtrl', function SlideshowController( $scope, inBounds ) {
+.controller( 'SlideshowCtrl', function SlideshowController( $scope, imagesloaded, inBounds ) {
   
   $scope.currentSlideIndex = 0;
+  $scope.loading = true;
   
   var slidshowTimer;
   var slideshowTimerPause;
+  var slides;
+  
+  $scope.initSlideshow = function(_slides) {
+      slides = $scope.slides = _slides;
+      loadSlides();
+  };
+  
+  var loaderCallbacks = {
+    'always' : function( instance ) {
+      $scope.loading = false;
+      $scope.$digest();
+      if($scope.hasMultipleSlides()) {
+        $scope.startAutoSlideshow();
+      }
+    }
+  };
+  
+  var loadSlides = function() {
+    var slidesArray = imagesloaded.convertObjectsWithSrcToArray(slides);
+    imagesloaded.loadImages(slidesArray, loaderCallbacks );
+  };
   
   var changeSlide = function(newIndex) {
-    inBounds.setUpperBound($scope.slides.length-1);
+    inBounds.setUpperBound(slides.length-1);
     $scope.currentSlideIndex = inBounds.keepInBounds(newIndex);
     $scope.$broadcast('slideChanged', $scope.currentSlideIndex);
   };
@@ -71,7 +91,9 @@ angular.module( 'dagb.directives.slideshow.slideshow', [
     clearTimeout(slideshowTimerPause);
   };
   
-  
+  $scope.hasMultipleSlides = function() {
+    return slides.length > 1;
+  };
   
   $scope.startAutoSlideshow = function() {
     startTimer();
@@ -94,9 +116,6 @@ angular.module( 'dagb.directives.slideshow.slideshow', [
     return parseInt(index, 10) === $scope.currentSlideIndex;
   };
   
-  $scope.hasMultipleSlides = function() {
-    return $scope.slides.length > 1;
-  };
   
 })
 

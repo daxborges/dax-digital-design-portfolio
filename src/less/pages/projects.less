@@ -49,14 +49,15 @@
   }
 }
 .slideshow {
+  margin-top: 10px;
   position: relative;
   &:after {
     content: '';
     display: block;
-    padding-top: 56.27%;
+    padding-top: 57.948718%;
   }
   .content {
-    background-color: @primaryColor;
+    background-color: rgba(255,255,255, .5);
     .slide-list-nav {
       left: 0px;
       position: absolute;
@@ -76,10 +77,14 @@
       }
     }
     .slides {
+      cursor: pointer;
       li {
         display: none;
         &.selected {
           display: block;
+        }
+        img {
+          position: absolute;
         }
       }
     }

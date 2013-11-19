@@ -2,7 +2,7 @@
   "name": "ng-boilerplate",
   "version": "0.3.1",
   "devDependencies": {
-    "angular": "~1.2.0-rc.3",
+    "angular": "~1.2.0",
     "angular-mocks": "~1.0.7",
     "angular-bootstrap": "~0.3.0",
     "angular-ui-router": "~0.2.0",
@@ -10,8 +10,11 @@
     "bootstrap": "~2.3.2",
     "underscore": "~1.5.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "imagesloaded": "~3.0.4",
+    "jquery": "~2.0.3"
+  },
   "resolutions": {
-    "angular": "~1.2.0-rc.3"
+    "angular": "~1.2.0"
   }
 }

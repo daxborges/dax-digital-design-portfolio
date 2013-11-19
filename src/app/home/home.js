@@ -15,7 +15,9 @@
 angular.module( 'dagbPortfolioSite.home', [
   'ui.router',
   'dagbPortfolioSite.services.projects',
-  'dagb.directives.svg.data'
+  'dagb.directives.animations.listAnimate',
+  'dagb.directives.svg.data',
+  'dagb.services.imagesloaded'
 ])
 
 /**
@@ -39,8 +41,29 @@ angular.module( 'dagbPortfolioSite.home', [
 /**
  * And of course we define a controller for our route.
  */
-.controller( 'HomeCtrl', function HomeController( $scope, projectsService ) {
+.controller( 'HomeCtrl', function HomeController( $scope, imagesloaded, projectsService ) {
   $scope.projects = projectsService;
+  $scope.loading = true;
+  
+  var loaderCallbacks = {
+    'always' : function( instance ) {
+      $scope.loading = false;
+      $scope.$digest();
+    }
+  };
+  
+  var loadLogos = function() {
+  
+    logosArray = [];
+    
+    for(var i = 0; i < $scope.projects.length; i++) {
+      logosArray.push($scope.projects[i].logo.src);
+    }
+    
+    imagesloaded.loadImages(logosArray, loaderCallbacks );
+  };
+  
+  loadLogos();
 })
 
 ;
