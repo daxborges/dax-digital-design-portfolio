@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html ng-app="dagbPortfolioSite" ng-controller="AppCtrl" >
   <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    
     <title ng-bind="pageTitle"></title>
-
-    <!-- font awesome from BootstrapCDN -->
-    <!-- <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
 
     <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
     <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
@@ -32,8 +31,18 @@
       <ul class="container">
         <li><a ui-sref="about">about</a></li>
         <li><a href="mailto:dax@daxdigitaldesign.com">contact</a></li>
-        <li><a href="/assets/pdf/dax_borges_resume_2013.pdf" target="_blank">r&#233;sum&#233;</a></li>
+        <li><a href="assets/pdf/dax_borges_resume_2013.pdf" target="_blank">resum&#233;</a></li>
       </ul>
     </footer>
+    <script type="text/javascript">
+    	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    	</script>
+    <script type="text/javascript">
+    	try{ 
+    	var pageTracker = _gat._getTracker("UA-4694851-2");
+    	pageTracker._trackPageview();
+    	} catch(err) {} 
+    </script>
   </body>
 </html>

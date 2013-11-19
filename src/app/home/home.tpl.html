@@ -7,11 +7,10 @@
     
 <ul ng-hide="loading" class="row" dagb-list-animate="loading">
   <li ng-repeat="project in projects" class="project-tile span4">
-    <div class="content">
+    <a class="content" ui-sref="projects({ projectId : project.id })">
       <span class="helper"></span>
       <img ng-src="{{ project.logo.src }}" alt="{{ project.info.client }}" class="{{ project.logo.orientation }}"/>
-    </div>
-    <a class="full-absolute" ui-sref="projects({ projectId : project.id })" ></a>
+    </a>
   </li>
 </ul>
 
