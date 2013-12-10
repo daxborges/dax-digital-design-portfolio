@@ -54,7 +54,7 @@ angular.module( 'dagbPortfolioSite.services.projects', [] )
           'src' : clientImageDir + 'homegrown/slide4.jpg'
         },
         {
-          'src' : clientImageDir + 'homegrown/slide5.jpg'
+          'src' : clientImageDir + 'homegrown/slide6.jpg'
         }
       ]
     },
